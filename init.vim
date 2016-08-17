@@ -40,6 +40,10 @@ set splitright
 set tabstop=4
 set title
 
+" Whitespace
+set listchars=tab:>·,space:.
+set list
+
 " Searching
 set hlsearch
 set ignorecase
