@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'mhartington/oceanic-next'
 Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'tpope/vim-sensible'
+Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim'
 call plug#end()
 
@@ -21,8 +22,13 @@ let g:python3_host_prog = '/Users/bhenze/.pyenv/versions/neovim3/bin/python'
 " Include configs
 source $HOME/.config/nvim/autocomplete.vim
 
+" Start file browser
+autocmd vimenter * NERDTree
+autocmd vimenter * execute "normal \<c-w>l"
+
 " Shortcuts
 nnoremap ; :
+nnoremap , :qa<CR>
 
 " Basic
 set clipboard+=unnamedplus
@@ -41,7 +47,7 @@ set tabstop=4
 set title
 
 " Whitespace
-set listchars=tab:>·,space:.
+set listchars=tab:→→
 set list
 
 " Searching
