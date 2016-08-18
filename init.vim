@@ -47,7 +47,7 @@ set tabstop=4
 set title
 
 " Whitespace
-set listchars=tab:→→
+set listchars=tab:→·,trail:~
 set list
 
 " Searching
