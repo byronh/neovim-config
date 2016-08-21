@@ -23,6 +23,7 @@ let g:python3_host_prog = '/Users/bhenze/.pyenv/versions/neovim3/bin/python'
 source $HOME/.config/nvim/autocomplete.vim
 
 " Start file browser
+let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
 autocmd vimenter * execute "normal \<c-w>l"
 
