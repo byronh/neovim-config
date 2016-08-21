@@ -5,6 +5,7 @@ Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim'
+Plug 'jistr/vim-nerdtree-tabs'
 call plug#end()
 
  " Oceanic theme
@@ -22,10 +23,14 @@ let g:python3_host_prog = '/Users/bhenze/.pyenv/versions/neovim3/bin/python'
 " Include configs
 source $HOME/.config/nvim/autocomplete.vim
 
-" Start file browser
+" Nerdtree
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['.git$', '.gradle$', 'build$']
+let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
-autocmd vimenter * NERDTree
-autocmd vimenter * execute "normal \<c-w>l"
+
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_autofind=1
 
 " Shortcuts
 nnoremap ; :
